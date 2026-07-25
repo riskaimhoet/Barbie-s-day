@@ -1,0 +1,719 @@
+body{
+
+opacity:0;
+
+animation:fadeIn 1s forwards;
+
+}
+
+@keyframes fadeIn{
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+overflow-x:hidden;
+background:white;
+
+}
+
+.section{
+
+position:relative;
+
+width:100%;
+
+}
+
+.bg{
+
+display:block;
+
+width:100%;
+
+height:auto;
+
+}
+
+
+/* ========================= */
+/* Layer */
+/* ========================= */
+
+.bg3,
+.bg4{
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+}
+
+
+/* ========================= */
+/* Background 3 */
+/* ========================= */
+
+.bg3{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.film{
+
+width:35%;
+
+opacity:0;
+
+transform:translateY(60px) scale(.95);
+
+transition:
+opacity .15s ease,
+transform .20s ease;
+
+}
+
+.film.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.film1{
+
+margin-right:-5%;
+
+}
+
+.film2{
+
+margin-right:-5%;
+
+}
+
+
+/* HP */
+
+@media(max-width:768px){
+
+.bg3{
+
+flex-direction:column;
+
+}
+
+.film{
+
+width:48%;
+
+margin:18px 0;
+
+}
+
+.film1.show{
+
+transition-delay:.15s;
+
+}
+
+.film2.show{
+
+transition-delay:.45s;
+
+}
+
+.film3.show{
+
+transition-delay:.75s;
+
+}
+
+}
+
+/* ========================= */
+/* Background 4 */
+/* ========================= */
+
+.bg4{
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+}
+
+.vinyl-box{
+
+position:absolute;
+
+width:43%;
+
+/* Posisi */
+left:40%;
+top:48%;
+
+transform:translate(-50%,-50%);
+
+}
+
+.vinyl{
+
+width:100%;
+
+animation:spin 12s linear infinite;
+
+}
+
+.vinyl-photo{
+
+position:absolute;
+
+left:50%;
+top:49%;
+
+transform:translate(-50%,-50%);
+
+width:90%;
+
+}
+
+
+/* HP */
+
+@media(max-width:768px){
+
+.vinyl-box{
+
+width:55%;
+
+}
+
+}
+
+
+/* ========================= */
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ========================= */
+/* Background 5 */
+/* ========================= */
+
+.bg5{
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.mySwiper{
+
+width:100%;
+
+padding:80px 0;
+
+overflow:visible;
+
+}
+
+.swiper-slide{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+transition:.4s;
+
+}
+
+.swiper-slide{
+
+display:flex;
+
+justify-content:center;
+
+transition:.45s;
+
+}
+
+.swiper-slide img{
+
+height:500px;
+
+width:auto;
+
+transition:.45s;
+
+filter:blur(2px);
+
+opacity:.45;
+
+transform:scale(.82);
+
+}
+
+.swiper-slide-active img{
+
+filter:none;
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+.swiper-slide-prev img,
+.swiper-slide-next img{
+
+filter:blur(.8px);
+
+opacity:.75;
+
+transform:scale(.9);
+
+}
+
+/* HP */
+
+@media(max-width:768px){
+
+.swiper-slide img{
+
+height:750px;
+
+}
+
+}
+
+/* ========================= */
+/* Background 6 */
+/* ========================= */
+
+.bg6{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+}
+
+.flower-box{
+
+position:absolute;
+
+left:20%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:46%;
+
+}
+
+.flower-photo{
+
+width:100%;
+
+display:block;
+
+}
+
+.text-box{
+
+position:absolute;
+
+left:43%;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:%;
+
+}
+
+.text-box{
+
+font-size:12px;
+
+line-height:2;
+
+}
+
+
+/* ========================= */
+/* Background7 */
+/* ========================= */
+
+.bg7-section{
+
+position:relative;
+
+}
+
+.Kolase1{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    z-index: 2;
+
+    animation: fadeUp 1s ease;
+
+}
+
+.Kolase2{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    z-index: 2;
+
+    animation: fadeUp 1s ease;
+
+}
+
+.Kolase3{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    z-index: 2;
+
+    animation: fadeUp 1s ease;
+
+}
+
+.Kolase4{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    z-index: 2;
+
+    animation: fadeUp 1s ease;
+
+}
+
+
+.bg7-photo.show{
+
+opacity:1;
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+/* ========================= */
+/* Background 8 */
+/* ========================= */
+
+.bg8{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%
+
+}
+
+/* ========================= */
+/* Background9 */
+/* ========================= */
+
+.bg9-section{
+
+position:relative;
+
+}
+
+.top{
+
+position:absolute;
+
+top:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:100%;
+
+z-index:2;
+
+}
+
+.bottom{
+
+position:absolute;
+
+bottom:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:100%;
+
+z-index:2;
+
+}
+
+.element{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:100%;
+
+z-index:3;
+
+}
+
+/* ========================= */
+/* Ending Page2 */
+/* ========================= */
+
+.ending-page2{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#000;
+
+overflow:hidden;
+
+}
+
+.ending-content{
+
+text-align:center;
+
+color:white;
+
+padding:30px;
+
+}
+
+.ending-line{
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:1s;
+
+}
+
+.ending-line.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.line1{
+
+font-size:38px;
+
+margin-bottom:25px;
+
+}
+
+.line2{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.line3{
+
+font-size:22px;
+
+line-height:1.7;
+
+margin-bottom:80px;
+
+}
+
+.swipe-guide{
+
+opacity:0;
+
+transition:1s;
+
+}
+
+.swipe-guide.show{
+
+opacity:1;
+
+}
+
+.arrow{
+
+font-size:40px;
+
+animation:arrowFloat 1.5s infinite;
+
+}
+
+.swipe-guide p{
+
+margin-top:8px;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+}
+
+@keyframes arrowFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+body{
+
+    transition:.8s;
+
+}
+
+body.fade-out{
+
+    opacity:0;
+
+}

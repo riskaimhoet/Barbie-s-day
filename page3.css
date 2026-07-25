@@ -1,0 +1,364 @@
+/* ===================================== */
+/* RESET */
+/* ===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+
+/* ===================================== */
+/* BACKGROUND */
+/* ===================================== */
+
+body{
+
+    background:#EAF7FF;
+
+    overflow:hidden;
+
+    font-family:sans-serif;
+
+}
+
+
+/* ===================================== */
+/* PAGE */
+/* ===================================== */
+
+.page3{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* ===================================== */
+/* WHEEL */
+/* ===================================== */
+
+.wheel-container{
+
+    position:relative;
+
+}
+
+
+#wheel{
+
+    width:min(75vw, 430px);
+
+    display:block;
+
+}
+
+
+/* ===================================== */
+/* POINTER */
+/* ===================================== */
+
+#pointer{
+
+    position:absolute;
+
+    top:-30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:150px;
+
+}
+
+/* ===================================== */
+/* WHEEL TRANSITION */
+/* ===================================== */
+
+#wheel{
+
+    width:min(75vw,430px);
+
+    display:block;
+
+    transition: transform 5s cubic-bezier(.17,.67,.18,1);
+
+}
+
+/* ===================================== */
+/* CONFETTI */
+/* ===================================== */
+
+#confetti-container{
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+
+}
+
+.confetti{
+
+    position: absolute;
+
+    width: 10px;
+    height: 18px;
+
+    border-radius: 2px;
+
+    opacity: 0;
+
+    animation: burst 1.8s ease-out forwards;
+
+}
+
+@keyframes burst{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+            translate(0,0)
+            rotate(0deg)
+            scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            rotate(720deg)
+            scale(.5);
+
+    }
+
+}
+
+/* ===================================== */
+/* SCRATCH CARD */
+/* ===================================== */
+
+#scratch-container{
+
+    position:absolute;
+
+    width:min(85vw,500px);
+
+    aspect-ratio:1/1;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.8s;
+
+}
+
+#scratch-container.show{
+
+    display:flex;
+
+    opacity:1;
+
+}
+
+#qr,
+#frame{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit: fill;
+
+}
+
+#qr{
+
+    position:absolute;
+
+    width:65%;
+
+    height:72%;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    object-fit:contain;
+
+    z-index:1;
+
+}
+
+#frame{
+
+    z-index:3;
+
+    pointer-events:none;
+
+}
+
+#scratchCanvas{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+
+    touch-action:none;
+
+    cursor:pointer;
+
+}
+
+/* ===================================== */
+/* SCRATCH TEXT */
+/* ===================================== */
+
+#scratch-text{
+
+    position:absolute;
+
+    bottom:-55px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:18px;
+
+    color:#4d6f9f;
+
+    font-weight:600;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+    animation:floatText 2s ease-in-out infinite;
+
+}
+
+@keyframes floatText{
+
+    0%,100%{
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-50%)
+            translateY(-6px);
+
+    }
+
+}
+
+/* ===================================== */
+/* BACK BUTTON */
+/* ===================================== */
+
+#back-buttons{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    position:absolute;
+
+    bottom:70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+#back-buttons.show{
+
+    display:flex;
+
+}
+
+#back-buttons a{
+
+    background:#ffffff;
+
+    color:#5f8ecf;
+
+    text-decoration:none;
+
+    padding:14px 26px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+    transition:.25s;
+
+}
+
+#back-buttons a:hover{
+
+    transform:translateY(-2px);
+
+}
+
