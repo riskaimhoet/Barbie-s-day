@@ -190,18 +190,18 @@ body{
 
     position:absolute;
 
-    top:47%;
+    top:50%;
     left:50%;
 
     transform:translateX(-50%);
 
-    width:60%;
+    width:75%;
 
     text-align:center;
 
-    font-size:clamp(16px, 2vw, 26px);
+    font-size:clamp(16px, 2vw, 30px);
 
-    font-weight:600;
+    font-weight:800;
 
     color:#6d8fd6;
 
@@ -210,4 +210,236 @@ body{
     z-index:20;
 
     pointer-events:none;
+}
+
+/* ==================================
+   GIFT SCENE
+================================== */
+
+#giftScene{
+
+    position:fixed;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+#giftBox{
+
+    width:300px;
+
+    cursor:pointer;
+
+    animation:giftBounce 5s infinite;
+}
+
+@keyframes giftBounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+}
+
+.gift-item{
+
+    position:absolute;
+
+    width:100px;
+
+    opacity:0;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.3);
+
+    transition:2s ease;
+}
+
+.explode{
+
+    opacity:1;
+
+}
+
+.bag.explode{
+    transform:
+    translate(-230px,-30px)
+    rotate(-30deg);
+}
+
+.balloon.explode{
+    transform:
+    translate(-350px,-20px)
+    rotate(20deg);
+}
+
+.bear.explode{
+    transform:
+    translate(-5px,200px)
+    rotate(25deg);
+}
+
+.cupcake.explode{
+    transform:
+    translate(-175px,215px)
+    rotate(-15deg);
+}
+
+.perfume.explode{
+    transform:
+    translate(-250px,-150px)
+    rotate(15deg);
+}
+
+.iphone.explode{
+    transform:
+    translate(50px,95px)
+    rotate(-15deg);
+}
+
+.ring.explode{
+    transform:
+    translate(-100px,-215px)
+    rotate(30deg);
+}
+
+.makeup.explode{
+    transform:
+    translate(155px,60px)
+    rotate(-20deg);
+}
+
+.dog1.explode{
+    transform:
+    translate(-250px,100px)
+    rotate(-25deg);
+}
+
+.dog2.explode{
+    transform:
+    translate(-5px,-300px)
+    rotate(20deg);
+}
+
+.heels.explode{
+    transform:
+    translate(150px,-150px)
+    rotate(0deg);
+}
+
+.jewelry.explode{
+    transform:
+    translate(50px,-200px)
+    rotate(-30deg);
+}
+
+.lipstick.explode{
+    transform:
+    translate(120px,-50px)
+    rotate(15deg);
+}
+
+.plane.explode{
+    transform:
+    translate(-215px,-250px)
+    rotate(10deg);
+}
+
+.tea.explode{
+    transform:
+    translate(155px,-150px)
+    rotate(-20deg);
+}
+
+.mobil.explode{
+    transform:
+    translate(-90px,120px)
+    rotate(-15deg);
+}
+
+#questionBox{
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    text-align:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:1000;
+
+    transition:1s;
+}
+
+#questionBox.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+}
+
+#questionBox h2{
+
+    color:#0f172a;
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+}
+
+.question-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    justify-content:center;
+}
+
+.question-buttons button{
+
+    border:none;
+
+    padding:18px 36px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    font-weight:bold;
+}
+
+.background.change{
+
+    background-image:
+    url("background2.JPEG");
+
+    transition:2s ease;
+}
+
+.fade-out{
+    opacity:0 !important;
+    transition:1.5s ease;
 }
