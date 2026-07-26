@@ -1,58 +1,46 @@
 body{
-
-opacity:0;
-
-animation:fadeIn 1s forwards;
+    opacity:0;
+    animation:fadeIn 1s forwards;
 
 }
 
 @keyframes fadeIn{
-
-to{
-
-opacity:1;
-
-}
+    
+    to{
+        opacity:1;
+    }
 
 }
 
 
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
 }
 
 html{
-
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 
 }
 
 body{
-
-overflow-x:hidden;
-background:white;
+    overflow-x:hidden;
+    background:white;
 
 }
 
 .section{
-
-position:relative;
-
-width:100%;
+    position:relative;
+    width:100%;
 
 }
 
 .bg{
-
-display:block;
-
-width:100%;
-
-height:auto;
+    display:block;
+    width:100%;
+    height:auto;
 
 }
 
@@ -63,14 +51,11 @@ height:auto;
 
 .bg3,
 .bg4{
-
-position:absolute;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
 
 }
 
@@ -80,46 +65,35 @@ height:100%;
 /* ========================= */
 
 .bg3{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
 }
 
 .film{
-
-width:35%;
-
-opacity:0;
-
-transform:translateY(60px) scale(.95);
-
-transition:
-opacity .15s ease,
-transform .20s ease;
+    width:35%;
+    opacity:0;
+    ransform:translateY(60px) scale(.95);
+    transition:
+    opacity .15s ease,
+    transform .20s ease;
 
 }
 
 .film.show{
-
-opacity:1;
-
-transform:translateY(0);
+    opacity:1;
+    transform:translateY(0);
 
 }
 
 .film1{
-
-margin-right:-5%;
+    margin-right:-5%;
 
 }
 
 .film2{
-
-margin-right:-5%;
+    margin-right:-5%;
 
 }
 
@@ -167,49 +141,37 @@ margin-right:-5%;
 /* ========================= */
 
 .bg4{
-
-position:absolute;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
 
 }
 
 .vinyl-box{
+    position:absolute;
+    width:43%;
 
-position:absolute;
-
-width:43%;
-
-/* Posisi */
-left:40%;
-top:48%;
-
-transform:translate(-50%,-50%);
+    /* Posisi */
+    left:40%;
+    top:48%;
+    transform:translate(-50%,-50%);
 
 }
 
 .vinyl{
-
-width:100%;
-
-animation:spin 12s linear infinite;
+    width:100%;
+    animation:spin 12s linear infinite;
 
 }
 
 .vinyl-photo{
-
-position:absolute;
-
-left:50%;
-top:49%;
-
-transform:translate(-50%,-50%);
-
-width:90%;
+    position:absolute;
+    left:50%;
+    top:49%;
+    transform:translate(-50%,-50%);
+    width:90%;
 
 }
 
@@ -250,20 +212,14 @@ transform:rotate(360deg);
 /* ========================= */
 
 .bg5{
-
-position:absolute;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
 }
 
@@ -353,64 +309,44 @@ height:520px;
 /* ========================= */
 
 .bg6{
-
-position:absolute;
-
-left:0;
-
-top:0;
-
-width:100%;
-
-height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
 
 }
 
 .flower-box{
-
-position:absolute;
-
-left:24%;
-
-top:54%;
-
-transform:translate(-50%,-50%);
-
-width:42%;
+    position:absolute;
+    left:24%;
+    top:54%;
+    transform:translate(-50%,-50%);
+    width:42%;
 
 }
 
 .flower-photo{
-
-width:100%;
-
-display:block;
+    width:100%;
+    display:block;
 
 }
 
 .text-box{
-
-opacity:0;
-
-position:absolute;
-
-left:50%;
-
-top:50%;
-
-transform:translateY(-50%);
-
-width:50%;
+    opacity:0;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translateY(-50%);
+    width:min(42vw,620px);
 
 }
 
 .text-box{
-
-font-size:10px;
-
-line-height:1.9;
-
+    font-size:clamp(8px,2vw,15px);
+    line-height:1.9;
 }
+
 
 
 /* ========================= */
@@ -418,8 +354,7 @@ line-height:1.9;
 /* ========================= */
 
 .bg7-section{
-
-position:relative;
+    position:relative;
 
 }
 
@@ -495,10 +430,8 @@ position:relative;
 
 
 .bg7-photo.show{
-
-opacity:1;
-
-transform:translate(-50%,-50%) scale(1);
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
 
 }
 
@@ -507,16 +440,11 @@ transform:translate(-50%,-50%) scale(1);
 /* ========================= */
 
 .bg8{
-
-position:absolute;
-
-left:0;
-
-top:0;
-
-width:100%;
-
-height:100%
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%
 
 }
 
