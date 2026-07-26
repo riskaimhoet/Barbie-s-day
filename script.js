@@ -133,13 +133,13 @@ giftBox.addEventListener("click", () => {
 
     giftBox.src = "openedgift.PNG";
 
+    background.classList.add("change");
+
     giftItems.forEach(item => {
 
         item.classList.add("explode");
 
     });
-
-    background.classList.add("change");
 
     setTimeout(() => {
 

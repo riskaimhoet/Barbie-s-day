@@ -130,33 +130,33 @@ margin-right:-5%;
 
 .bg3{
 
-flex-direction:column;
+    flex-direction:row;
 
 }
 
 .film{
 
-width:48%;
+    width:30%;
 
-margin:18px 0;
+    margin:0;
 
 }
 
 .film1.show{
 
-transition-delay:.15s;
+    transition-delay:.15s;
 
 }
 
 .film2.show{
 
-transition-delay:.45s;
+    transition-delay:.45s;
 
 }
 
 .film3.show{
 
-transition-delay:.75s;
+    transition-delay:.75s;
 
 }
 
@@ -398,7 +398,7 @@ top:50%;
 
 transform:translateY(-50%);
 
-width:%;
+width:2%;
 
 }
 
@@ -460,6 +460,7 @@ position:relative;
     position: absolute;
     top: 0;
     left: 0;
+    margin-top:-90px;
 
     width: 100%;
     height: auto;
@@ -477,6 +478,7 @@ position:relative;
     position: absolute;
     top: 0;
     left: 0;
+    margin-top:-180px;
 
     width: 100%;
     height: auto;
