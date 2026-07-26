@@ -74,7 +74,7 @@ body{
 .film{
     width:35%;
     opacity:0;
-    ransform:translateY(60px) scale(.95);
+    transform:translateY(60px) scale(.95);
     transition:
     opacity .15s ease,
     transform .20s ease;
@@ -349,7 +349,7 @@ height:520px;
 
     .text-box{
         width:50%;
-        left:45%;
+        left:50%;
         top:50%;
 
         font-size:5px;
