@@ -24,6 +24,11 @@ document.querySelectorAll(".gift-item");
 const background =
 document.querySelector(".background");
 
+const background2 =
+document.querySelector(".background2");
+
+
+
 
 function typeWriter(text){
 
@@ -131,13 +136,17 @@ function showGiftScene(){
 
 giftBox.addEventListener("click", () => {
 
-    giftBox.src = "openedgift.PNG";
+    background2.classList.add("show");
 
-    background.classList.add("change");
+    requestAnimationFrame(() => {
 
-    giftItems.forEach(item => {
+        giftBox.src = "openedgift.PNG";
 
-        item.classList.add("explode");
+        giftItems.forEach(item => {
+
+            item.classList.add("explode");
+
+        });
 
     });
 
@@ -145,13 +154,13 @@ giftBox.addEventListener("click", () => {
 
         questionBox.classList.add("show");
 
-    }, 7000);
+    },7000);
 
     setTimeout(() => {
 
         giftBox.style.opacity = "0";
 
-    }, 3000);
+    },3000);
 
 });
 

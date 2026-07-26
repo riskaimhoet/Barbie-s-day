@@ -87,6 +87,24 @@ body{
 
 }
 
+.film1.show{
+
+    transition-delay:1s;
+
+}
+
+.film2.show{
+
+    transition-delay:2s;
+
+}
+
+.film3.show{
+
+    transition-delay:3s;
+
+}
+
 .film1{
     margin-right:-5%;
 
@@ -113,24 +131,6 @@ body{
     width:30%;
 
     margin:0;
-
-}
-
-.film1.show{
-
-    transition-delay:.15s;
-
-}
-
-.film2.show{
-
-    transition-delay:.45s;
-
-}
-
-.film3.show{
-
-    transition-delay:.75s;
 
 }
 
@@ -319,8 +319,8 @@ height:520px;
 
 .flower-box{
     position:absolute;
-    left:24%;
-    top:54%;
+    left:25%;
+    top:50%;
     transform:translate(-50%,-50%);
     width:42%;
 
@@ -366,7 +366,7 @@ height:520px;
     .text-box{
         width:50%;
         left:50%;
-        top:53%;
+        top:50%;
 
         font-size:16px;
         line-height:2.0;
@@ -424,7 +424,7 @@ height:520px;
     position: absolute;
     top: 0;
     left: 0;
-    margin-top:-90px;
+    margin-top:-200px;
 
     width: 100%;
     height: auto;
@@ -442,7 +442,7 @@ height:520px;
     position: absolute;
     top: 0;
     left: 0;
-    margin-top:-180px;
+    margin-top:-400px;
 
     width: 100%;
     height: auto;
@@ -452,6 +452,23 @@ height:520px;
     z-index: 2;
 
     animation: fadeUp 1s ease;
+
+}
+
+
+@media(max-width:768px){
+
+.Kolase3{
+
+margin-top:-60px;
+
+}
+
+.Kolase4{
+
+margin-top:-130px;
+
+}
 
 }
 

@@ -14,13 +14,39 @@ body{
 /* BACKGROUND */
 
 .background{
+
     position:fixed;
     inset:0;
+
+    z-index:-2;
 
     background-image:url("background1.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+}
+
+.background2{
+
+    position:fixed;
+    inset:0;
+
+    background-image:url("background2.JPEG");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    opacity:0;
+
+    transition:opacity .5s ease;
+
+    z-index:-1;
+}
+
+.background2.show{
+
+    opacity:1;
+
 }
 
 /* CONTAINER */
@@ -429,14 +455,6 @@ body{
     font-size:22px;
 
     font-weight:bold;
-}
-
-.background.change{
-
-    background-image:
-    url("background2.JPEG");
-
-    transition:2s ease;
 }
 
 .fade-out{

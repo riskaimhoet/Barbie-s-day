@@ -12,6 +12,8 @@ entry.target.classList.add("show");
 
 });
 
+const bgMusic = document.getElementById("bgMusic");
+
 },{
 threshold:0.3
 });
@@ -21,6 +23,7 @@ film.forEach(item=>{
 observer.observe(item);
 
 });
+
 
 
 /* ========================= */
@@ -63,6 +66,28 @@ slideShadows:false
 });
 
 window.addEventListener("load",()=>{
+
+    bgMusic.volume = 0;
+
+bgMusic.play().catch(() => {});
+
+let volume = 0;
+
+const fadeMusic = setInterval(() => {
+
+    volume += 0.02;
+
+    if (volume >= 0.25) {
+
+        volume = 0.25;
+
+        clearInterval(fadeMusic);
+
+    }
+
+    bgMusic.volume = volume;
+
+},100);
 
 document.getElementById("bg3").scrollIntoView({
 
@@ -140,25 +165,25 @@ setTimeout(()=>{
 
 line1.classList.add("show");
 
-},300);
+},100);
 
 setTimeout(()=>{
 
 line2.classList.add("show");
 
-},1400);
+},1100);
 
 setTimeout(()=>{
 
 line3.classList.add("show");
 
-},2500);
+},2100);
 
 setTimeout(()=>{
 
 swipeGuide.classList.add("show");
 
-},3800);
+},3100);
 
 }
 
