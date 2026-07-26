@@ -170,6 +170,56 @@ threshold:.6
 
 endingObserver.observe(ending);
 
+const typingTexts = document.querySelectorAll(".typing-text");
+
+const typingObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            const element = entry.target;
+
+            if(element.dataset.done) return;
+
+            element.dataset.done = true;
+
+            const originalText = element.textContent;
+
+            element.textContent = "";
+
+            element.classList.add("show");
+
+            let i = 0;
+
+            function type(){
+
+                if(i < originalText.length){
+
+                    element.textContent += originalText.charAt(i);
+
+                    i++;
+
+                    setTimeout(type,25);
+
+                }
+
+            }
+
+            type();
+
+        }
+
+    });
+
+},{
+    threshold:0.4
+});
+
+typingTexts.forEach(item=>{
+    typingObserver.observe(item);
+});
+
 window.addEventListener("scroll", () => {
 
     if (
