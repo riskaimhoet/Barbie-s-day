@@ -352,7 +352,7 @@ height:520px;
         left:50%;
         top:50%;
 
-        font: size 8px;;
+        font-size:8px;
         line-height:1.0;
     }
 
@@ -368,7 +368,7 @@ height:520px;
         left:50%;
         top:50%;
 
-        font-size:15px;
+        font-size:16px;
         line-height:2.0;
     }
 
