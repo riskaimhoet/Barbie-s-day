@@ -338,13 +338,40 @@ height:520px;
     left:50%;
     top:50%;
     transform:translateY(-50%);
-    width:min(42vw,620px);
+    width:min(35vw,620px);
 
 }
 
-.text-box{
-    font-size:clamp(8px,2vw,15px);
-    line-height:1.9;
+/* ========================= */
+/* HP */
+/* ========================= */
+@media screen and (max-width:768px){
+
+    .text-box{
+        width:50%;
+        left:50%;
+        top:50%;
+
+        font-size:10px;
+        line-height:1.9;
+    }
+
+}
+
+/* ========================= */
+/* Desktop */
+/* ========================= */
+@media screen and (min-width:769px){
+
+    .text-box{
+        width:50%;
+        left:50%;
+        top:50%;
+
+        font-size:15px;
+        line-height:1.9;
+    }
+
 }
 
 
