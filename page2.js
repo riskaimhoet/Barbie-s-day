@@ -170,55 +170,79 @@ threshold:.6
 
 endingObserver.observe(ending);
 
-const typingTexts = document.querySelectorAll(".typing-text");
 
-const typingObserver = new IntersectionObserver((entries)=>{
+/* ========================= */
+/* Background6 */
+/* ========================= */
 
-    entries.forEach(entry=>{
+const typingBox = document.getElementById("typingText");
 
-        if(entry.isIntersecting){
+if (typingBox) {
 
-            const element = entry.target;
+    const paragraphs = typingBox.querySelectorAll("p");
 
-            if(element.dataset.done) return;
+    paragraphs.forEach(p => {
+        p.dataset.text = p.textContent;
+        p.textContent = "";
+    });
 
-            element.dataset.done = true;
+    const observer = new IntersectionObserver((entries) => {
 
-            const originalText = element.textContent;
+        entries.forEach(entry => {
 
-            element.textContent = "";
+            if (!entry.isIntersecting) return;
 
-            element.classList.add("show");
+            observer.disconnect();
 
-            let i = 0;
+            typingBox.style.opacity = "1";
 
-            function type(){
+            let index = 0;
 
-                if(i < originalText.length){
+            function typeParagraph() {
 
-                    element.textContent += originalText.charAt(i);
+                if (index >= paragraphs.length) return;
 
-                    i++;
+                const p = paragraphs[index];
 
-                    setTimeout(type,25);
+                const text = p.dataset.text;
+
+                let i = 0;
+
+                function typeChar() {
+
+                    if (i < text.length) {
+
+                        p.textContent += text.charAt(i);
+
+                        i++;
+
+                        setTimeout(typeChar, 25);
+
+                    } else {
+
+                        index++;
+
+                        setTimeout(typeParagraph, 250);
+
+                    }
 
                 }
 
+                typeChar();
+
             }
 
-            type();
+            typeParagraph();
 
-        }
+        });
 
+    }, {
+        threshold: 0.35
     });
 
-},{
-    threshold:0.4
-});
+    observer.observe(typingBox);
 
-typingTexts.forEach(item=>{
-    typingObserver.observe(item);
-});
+}
 
 window.addEventListener("scroll", () => {
 
