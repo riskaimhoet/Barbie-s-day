@@ -257,7 +257,7 @@ transition:.45s;
 
 .swiper-slide img{
 
-height:620px;
+height:800px;
 
 width:auto;
 
@@ -301,7 +301,7 @@ transform:scale(.9);
     }
 
     .swiper-slide img{
-        height:520px;
+        height:500px;
     }
 
 }

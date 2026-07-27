@@ -43,6 +43,20 @@ centeredSlides:true,
 slidesPerView:1.6,
 spaceBetween:-90,
 
+breakpoints: {
+
+    0: {
+        slidesPerView: 1.2,
+        spaceBetween: -30
+    },
+
+    768: {
+        slidesPerView: 1.6,
+        spaceBetween: -90
+    }
+
+},
+
 initialSlide:0,
 
 loop:false,
@@ -104,13 +118,15 @@ window.addEventListener("load",()=>{
 
 setTimeout(()=>{
 
-swiper.slideNext(300);
+swiper.slideNext(200);
 
-setTimeout(()=>{
+setTimeout(() => {
 
-swiper.slidePrev(300);
+    swiper.slidePrev(200);
 
-},350);
+    swiper.slideTo(0,0);
+
+},500);
 
 },700);
 
