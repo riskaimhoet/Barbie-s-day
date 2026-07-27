@@ -40,27 +40,46 @@ grabCursor:true,
 
 centeredSlides:true,
 
-centeredSlidesBounds: true,
+slidesPerView:1.6,
+spaceBetween:-60,
 
-slidesPerView: 1.55,
+breakpoints: {
 
-spaceBetween: 0,
+    0: {
+        slidesPerView: 1.2,
+        spaceBetween: -30
+    },
+
+    768: {
+        slidesPerView: 1.6,
+        spaceBetween: -90
+    }
+
+},
+
+initialSlide:0,
+
+loop:false,
+
+speed:700,
 
 coverflowEffect:{
-    rotate:0,
-    stretch:-40,
-    depth:120,
-    modifier:1,
-    scale:0.85,
-    slideShadows:false
+
+rotate:0,
+
+stretch:0,
+
+depth:250,
+
+modifier:1.2,
+
+scale:0.82,
+
+slideShadows:false
+
 }
 
 });
-
-if (window.innerWidth <= 768) {
-    swiper.params.slidesPerView = 1.15;
-    swiper.update();
-}
 
 window.addEventListener("load",()=>{
 
