@@ -1,5 +1,7 @@
 const film = document.querySelectorAll(".film");
 
+const bgMusic = document.getElementById("bgMusic");
+
 const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach(entry=>{
@@ -285,3 +287,57 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+let musicStarted = false;
+
+function startBackgroundMusic() {
+
+    if (musicStarted) return;
+
+    musicStarted = true;
+
+    bgMusic.volume = 0;
+
+    bgMusic.play().catch(err => {
+
+        console.log("Music blocked:", err);
+
+    });
+
+    let volume = 0;
+
+    const fade = setInterval(() => {
+
+        volume += 0.02;
+
+        if (volume >= 0.25) {
+
+            volume = 0.25;
+
+            clearInterval(fade);
+
+        }
+
+        bgMusic.volume = volume;
+
+    },100);
+
+}
+
+window.addEventListener(
+    "touchstart",
+    startBackgroundMusic,
+    { once:true }
+);
+
+window.addEventListener(
+    "pointerdown",
+    startBackgroundMusic,
+    { once:true }
+);
+
+window.addEventListener(
+    "scroll",
+    startBackgroundMusic,
+    { once:true }
+);
