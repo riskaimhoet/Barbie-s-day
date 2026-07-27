@@ -40,20 +40,27 @@ grabCursor:true,
 
 centeredSlides:true,
 
-slidesPerView: 1.15,
+centeredSlidesBounds: true,
+
+slidesPerView: 1.55,
 
 spaceBetween: 0,
 
 coverflowEffect:{
     rotate:0,
-    stretch:0,
+    stretch:-40,
     depth:120,
     modifier:1,
-    scale:0.88,
+    scale:0.85,
     slideShadows:false
 }
 
 });
+
+if (window.innerWidth <= 768) {
+    swiper.params.slidesPerView = 1.15;
+    swiper.update();
+}
 
 window.addEventListener("load",()=>{
 
