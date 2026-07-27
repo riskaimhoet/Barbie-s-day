@@ -225,11 +225,15 @@ transform:rotate(360deg);
 
 .mySwiper{
 
-width:92%;
+    width:100%;
 
-padding:80px 0;
+    max-width:700px;
 
-overflow:visible;
+    margin:0 auto;
+
+    padding:80px 0;
+
+    overflow:visible;
 
 }
 
@@ -257,7 +261,7 @@ transition:.45s;
 
 .swiper-slide img{
 
-height:800px;
+height:650px;
 
 width:auto;
 
@@ -267,7 +271,7 @@ filter:blur(2px);
 
 opacity:.45;
 
-transform:scale(.82);
+transform:scale(.90);
 
 }
 
@@ -301,7 +305,7 @@ transform:scale(.9);
     }
 
     .swiper-slide img{
-        height:500px;
+        height:540px;
     }
 
 }

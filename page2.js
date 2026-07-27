@@ -40,43 +40,17 @@ grabCursor:true,
 
 centeredSlides:true,
 
-slidesPerView:1.6,
-spaceBetween:-60,
+slidesPerView: 1.15,
 
-breakpoints: {
-
-    0: {
-        slidesPerView: 1.2,
-        spaceBetween: -30
-    },
-
-    768: {
-        slidesPerView: 1.6,
-        spaceBetween: -90
-    }
-
-},
-
-initialSlide:0,
-
-loop:false,
-
-speed:700,
+spaceBetween: 0,
 
 coverflowEffect:{
-
-rotate:0,
-
-stretch:0,
-
-depth:250,
-
-modifier:1.2,
-
-scale:0.82,
-
-slideShadows:false
-
+    rotate:0,
+    stretch:0,
+    depth:120,
+    modifier:1,
+    scale:0.88,
+    slideShadows:false
 }
 
 });
