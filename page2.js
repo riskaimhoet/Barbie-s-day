@@ -41,7 +41,7 @@ grabCursor:true,
 centeredSlides:true,
 
 slidesPerView:1.6,
-spaceBetween:-90,
+spaceBetween:-60,
 
 breakpoints: {
 
