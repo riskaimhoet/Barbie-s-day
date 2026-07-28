@@ -222,14 +222,14 @@ function scratch(x, y){
     ctx.globalCompositeOperation = "destination-out";
 
     ctx.beginPath();
-
-    ctx.arc(x, y, 10, 0, Math.PI * 2);
+    
+    ctx.arc(x, y, 6, 0, Math.PI * 2);
 
     ctx.fill();
 
     scratchCount++;
 
-    if(scratchCount >= 10){
+    if(scratchCount >= 1000){
 
         scratchFinished = true;
 

@@ -89,6 +89,14 @@ body{
 
 }
 
+@media (max-width:768px){
+
+    #pointer{
+        top:-40px;
+    }
+
+}
+
 /* ===================================== */
 /* WHEEL TRANSITION */
 /* ===================================== */
@@ -327,6 +335,15 @@ body{
     transform:translateX(-50%);
 
 }
+
+@media (max-width:768px){
+
+    #back-buttons{
+        bottom:45px;
+    }
+
+}
+
 
 #back-buttons.show{
 
